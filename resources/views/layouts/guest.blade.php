@@ -47,15 +47,24 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('destinations.index') }}">Destinasi</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('galleries.index') }}">Galeri</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Artikel</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Kontak</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-                <li class="nav-item ms-lg-2"><a class="btn btn-accent btn-sm px-3" href="#">Daftar</a></li>
+                <li class="nav-item ms-lg-2"><a class="btn btn-accent btn-sm px-3" href="{{ route('register') }}">Daftar</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <main class="flex-grow-1">
+    @if(session('success'))
+    <div class="container mt-3">
+        <div class="alert alert-success alert-dismissible fade show">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    </div>
+    @endif
     @yield('content')
 </main>
 
