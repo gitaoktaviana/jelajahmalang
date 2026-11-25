@@ -49,6 +49,7 @@
                 <li class="nav-item"><a class="nav-link" href="#">Artikel</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">Tentang</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Kontak</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
                 <li class="nav-item ms-lg-2"><a class="btn btn-accent btn-sm px-3" href="{{ route('register') }}">Daftar</a></li>
             </ul>
