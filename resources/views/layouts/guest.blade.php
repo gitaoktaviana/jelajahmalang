@@ -20,6 +20,7 @@
         .navbar-jm { background: var(--jm-primary); }
         .navbar-jm .nav-link { color: #fff; opacity: .9; }
         .navbar-jm .nav-link:hover { opacity: 1; color: var(--jm-secondary); }
+        .navbar-jm .nav-link.active {color: #fff; opacity: 1; font-weight: 600; border-bottom: 3px solid var(--jm-accent);}
         .btn-accent { background: var(--jm-accent); color: #fff; border: 0; }
         .btn-accent:hover { background: #d96f00; color: #fff; }
         .btn-outline-jm { border: 2px solid #fff; color: #fff; }
@@ -43,13 +44,12 @@
         </button>
         <div class="collapse navbar-collapse" id="nav">
             <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-                <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('destinations.index') }}">Destinasi</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('galleries.index') }}">Galeri</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Artikel</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">Tentang</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Kontak</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+                <li class="nav-item"><a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link {{ request()->routeIs('destinations.*') ? 'active' : '' }}" href="{{ route('destinations.index') }}">Destinasi</a></li>
+                <li class="nav-item"><a class="nav-link {{ request()->routeIs('galleries.*') ? 'active' : '' }}" href="{{ route('galleries.index') }}">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link {{ request()->routeIs('articles.*') ? 'active' : '' }}" href="{{ route('articles.index') }}">Artikel</a></li>
+                <li class="nav-item"><a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">Tentang</a></li>
+                <li class="nav-item"><a class="nav-link {{ request()->routeIs('contact*') ? 'active' : '' }}" href="{{ route('contact') }}">Kontak</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
                 <li class="nav-item ms-lg-2"><a class="btn btn-accent btn-sm px-3" href="{{ route('register') }}">Daftar</a></li>
             </ul>
