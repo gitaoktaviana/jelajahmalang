@@ -44,8 +44,8 @@
         <div class="collapse navbar-collapse" id="nav">
             <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
                 <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Destinasi</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('destinations.index') }}">Destinasi</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('galleries.index') }}">Galeri</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Artikel</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Login</a></li>

@@ -7,7 +7,7 @@
     <div class="container">
         <h1 class="display-5 fw-bold">Jelajahi Keindahan Malang Raya</h1>
         <p class="lead mb-4">Temukan destinasi alam, kuliner, dan budaya di Malang, Batu, dan sekitarnya.</p>
-        <a href="#" class="btn btn-accent btn-lg me-2">Lihat Destinasi</a>
+        <a href="{{ route('destinations.index') }}" class="btn btn-accent btn-lg me-2">Lihat Destinasi</a>
         <a href="#" class="btn btn-outline-jm btn-lg">Bergabung</a>
     </div>
 </section>
